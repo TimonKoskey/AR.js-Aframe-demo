@@ -1,8 +1,29 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js"></script>
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 
-<a-scene>
-  <a-sphere></a-sphere>
-  <a-plane width="10" height="10" position="0 0 -2.5" src="https://media.giphy.com/media/oYtVHSxngR3lC/giphy.gif"></a-plane>
-</a-scene>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false">
+		<a-marker-camera preset='hiro'>
+			<!-- <a-sphere radius='0.2' position='0.5 1.5 -0.5'></a-sphere> -->
 
-<script src="index.js"></script>
+			<a-plane src="wooden-brown.JPG" height='2' width='2' position='-2 1 0'></a-plane>
+
+			<a-text position='-2.9 1.8 0' height='2' width='2.5' value='TO COOLEST DEVS IN ELDORET' font='aileronsemibold'></a-text>
+			<a-image src='giphy.gif' width='1.5' height='0.5' position='-2.1 1.4 0'></a-image>
+			<a-text position='-2.5 1 0' height='1.5' width='1.5' value='From Timon Koskey'></a-text>
+			<a-text position='-2.9 0.7 0' height='0.2' width='1.7' value='Its been a good year thank you all for joining facebook developers circle and attending these events. I am looking forward to seeing all of you in the events we shall have next year'>
+			</a-text>
+			<a-text id='change-color' position='-2.7 0.3 0' height='1.7' width='1.9' value='Merry Christmas & Happy 2019'></a-text>
+		</a-marker-camera>
+		<a-entity camera></a-entity>
+	</a-scene>
+	<script src="index.js"></script>
+</body>
+</html>
+
+			<!-- 	position='-3.5 2 0' 
+				font='roboto' 
+				color='white'> -->
